@@ -256,3 +256,48 @@ function sayMeow() {
   quote = catName + " says Meow!";
 }
 console.log(sayMeow());
+
+const localChanges = {
+  today: { min: 32, max: 87 },
+  tomorrow: { min: 32, max: 78 }
+};
+
+function getMaxOfTheTemp(forecast) {
+  const {
+    tomorrow: { max: maxOfTomorrow }
+  } = forecast;
+  return maxOfTomorrow;
+}
+console.log(getMaxOfTheTemp(localChanges));
+
+const example4 = {
+  today: { morning: "breakfast", noon: "meal" },
+  tomorrow: { morning: "don´t know", noon: "meal" }
+};
+
+function example3(value) {
+  const {
+    today: { morning: whatIEat }
+  } = value;
+  return whatIEat;
+}
+console.log(example3(example4));
+
+const [z, , x, y] = [1, 2, 3, 4, 5, 6];
+console.log(z, x, y);
+
+let a = 5,
+  b = 4;
+(() => {
+  [a, b] = [b, a];
+})();
+console.log(a);
+console.log(b);
+
+let c = 2,
+  v = 8;
+(() => {
+  [c, v] = [5, 0];
+})();
+console.log(c);
+console.log(v);
