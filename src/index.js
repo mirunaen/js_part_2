@@ -254,6 +254,7 @@ function sayMeow() {
   "use strict";
   catName = "Lucifer";
   quote = catName + " says Meow!";
+  return quote;
 }
 console.log(sayMeow());
 
